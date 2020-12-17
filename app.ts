@@ -1,5 +1,5 @@
 import { Store } from './myngrx/store';
-import { contadorReducer } from './contador/contador.reducer';
+import { AppState, contadorReducer } from './contador/contador.reducer';
 import { incrementadorAction } from './contador/contador.actions';
 // Mas acciones aqui
 
@@ -12,8 +12,13 @@ import { incrementadorAction } from './contador/contador.actions';
 
 -----------------------------------------------------------------------------------------*/
 
+// Estado inicial
+const initialState: AppState = {
+    contador: 10
+};
 
-const store = new Store(contadorReducer, 10);
+
+const store = new Store<AppState>(contadorReducer, initialState);
 
 console.log(store.getState());
 

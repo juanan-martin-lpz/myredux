@@ -10,24 +10,27 @@ import { Action } from "../myngrx/myngrx";
 
   -----------------------------------------------------------------------------------------*/
 
-// Reducer
-// En este caso el State es de un tipo primitivo. Si fuera un objeto
-// habria que destructurarlo
-// { ...state, state.contador += 1 }
+// Definimos la interfaz donde almacenaremos los datos de la aplicacion
+export interface AppState {
+    contador: number;
+}
 
-export function contadorReducer(state = 10, accion: Action) {
+
+
+// Reducer
+export function contadorReducer(state: AppState, accion: Action) {
 
     switch (accion.type) {
         case 'INCREMENTAR':
-            return state += 1;
+            return { ...state, contador: state.contador += 1 };
         case 'DECREMENTAR':
-            return state -= 1;
+            return { ...state, contador: state.contador -= 1 };
         case 'MULTIPLICAR':
-            return state * accion.payload;
+            return { ...state, contador: state.contador * accion.payload };
         case 'DIVIDIR':
-            return state / accion.payload;
+            return { ...state, contador: state.contador / accion.payload };
         case 'RESET':
-            return 0;
+            return { ...state, contador: 0 };
 
     }
 
