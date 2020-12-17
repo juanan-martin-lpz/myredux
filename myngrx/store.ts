@@ -1,4 +1,4 @@
-import { Reducer, Action } from './myngrx/myngrx';
+import { Reducer, Action } from './myngrx';
 
 
 /*----------------------------------------------------------------------------------------

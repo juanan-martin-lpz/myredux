@@ -1,10 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Proyecto
-api/node_modules/
-angular-client/node_modules/
-api/uploads
-
+*.js
 /node_modules/
 
 # Compiled output
