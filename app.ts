@@ -1,7 +1,6 @@
 import { Store } from './myngrx/store';
 import { AppState, contadorReducer } from './contador/contador.reducer';
 import { incrementadorAction, multiplicarAction, resetAction } from './contador/contador.actions';
-// Mas acciones aqui
 
 
 /*----------------------------------------------------------------------------------------
